@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<h1>Cadastrar</h1>
+<h1>Cadastrar</h1>
+
+
+<form method="POST" class="row" novalidate>
+    <div class="col-md-4">
+      <label for="validationCustom01" class="form-label">Nome produto</label>
+      <input type="text" class="form-control" id="formNomeProduto" name="formNomeProduto" required>
+    </div>
+    <div class="col-md-4">
+      <label for="validationCustom02" class="form-label">Part number</label>
+      <input type="text" class="form-control" id="formPartNumber" name="formPartNumber" required>
+    
+    </div>
+    <div class="col-md-4">
+      
+      
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Label</label>
+        <input type="text" class="form-control" id="formLabelProduto" name="formLabelProduto" required>
+    </div>
+    <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">Start inventory</label>
+        <input type="text" class="form-control" id="formStartInventory" name="formStartInventory" required>
+      
+    </div>
+    <div class="col-md-4">
+      
+    </div>
+    <div class="row">
+
+        <div class="col-12">
+            <button class="btn btn-primary" type="submit">Submit form</button>
+        </div>
+    </div>
+    
+  </form>
+
+
+{% endblock %}

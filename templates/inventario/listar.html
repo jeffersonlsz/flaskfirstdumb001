@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Produtos</h1>
+    <h1>Produtos</h1>
+    <form method="GET">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Produto</th>
+                <th>PartNumber</th>
+                <th>Label</th>
+                <th>Start inventory</th>
+                <th>Received inventory</th>
+                <th>Shipped inventory</th>
+                <th>Inventory onhand</th>
+                <th>Minimum required</th>
+                <th></th>
+                <th></th>
+
+            </tr>
+            
+        </thead>
+        
+        <tbody>
+            {% for product in products %}
+            <tr>
+                <td> {{product[0]}}</td>
+                <td> {{product[1]}}</td>
+                <td> {{product[2]}}</td>
+                <td> {{product[3]}}</td>
+                <td> {{product[4]}}</td>
+                <td> {{product[5]}}</td>
+                <td> {{product[6]}}</td>
+                <td> {{product[7]}}</td>
+                <td> {{product[8]}}</td>
+                <td class="btn btn-default" ><a href="{{ url_for('atualizar', produto_id=product[0] )}}"><i class="bi bi-pen"></i></a></td>
+                <td class="btn btn-default" ><a href="{{ url_for('excluir', produto_id=product[0] )}}"></a><i class="bi bi-trash"></i></a></td>
+
+            </tr>
+            {%endfor%}
+        
+        
+        </tbody>
+        
+        <script>
+           
+           function atualizarRegistro(reg){
+                
+           }
+
+        </script>
+
+    </table>
+</form>
+
+   
+{% endblock %}
+
